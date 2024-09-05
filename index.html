@@ -23,11 +23,10 @@
                         <li class="d-flex align-items-center justify-content-between"><p class="mb-0" :class="{done: todo.done}">{{todo.text}}</p> <i @click="clearTodo(index)" class="fa-solid fa-trash-can"></i></li>                        
                     </ul>
                     <div class="d-flex">
-                        <input type="text" class="form me-3" v-model="newTodo">
+                        <input @keyup.enter="createNewTodo(newTodo)" type="text" class="form me-3" v-model="newTodo">
                         <button @click="createNewTodo(newTodo)">Aggiungi Task</button>
                     </div>
-                </div>
-                
+                </div>                
             </div>            
         </div>
     </div>
@@ -42,10 +41,3 @@
 
 
 
-
-<!-- Scaletta -->
-
-<!-- 
-preparazione variabili note ( lista di oggetti della todo list)
-mostrare in pagina dentro ad una ul tutta la to do list
--->
