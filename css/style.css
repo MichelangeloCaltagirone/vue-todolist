@@ -1,3 +1,8 @@
 .done {
     text-decoration: line-through;
+    color: brown;
+}
+
+i:hover {
+    scale: 1.2
 }

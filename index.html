@@ -20,7 +20,7 @@
                 <div class="col-8">
                     <h1 class="fw-bold mb-5">TO DO List</h1>
                     <ul v-for="(todo, index) in todos">
-                        <li class="d-flex align-items-center justify-content-between"><p class="mb-0" :class="{done: todo.done}">{{todo.text}}</p> <i @click="clearTodo(index)" class="fa-solid fa-trash-can"></i></li>                        
+                        <li class="d-flex align-items-center justify-content-between"><p @click="toggleDone(todo)" class="mb-0" :class="{done: todo.done}">{{todo.text}}</p> <i @click="clearTodo(index)" class="fa-solid fa-trash-can"></i></li>                        
                     </ul>
                     <div class="d-flex">
                         <input @keyup.enter="createNewTodo(newTodo)" type="text" class="form me-3" v-model="newTodo">
