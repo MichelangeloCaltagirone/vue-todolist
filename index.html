@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootsytap Css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
@@ -13,11 +15,37 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <div id="app">
-        
+        <div class="container mt-4">
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <h1 class="fw-bold mb-5">TO DO List</h1>
+                    <ul v-for="todo in todos">
+                        <li class="d-flex align-items-center justify-content-between"><p class="mb-0">{{todo.text}}</p> <i class="fa-solid fa-trash-can"></i></li>                        
+                    </ul>
+                    <div class="d-flex">
+                        <input type="text" class="form me-3" v-model="newTodo">
+                        <button @click="createNewTodo(newTodo)">Aggiungi Task</button>
+                    </div>
+                </div>
+                
+            </div>            
+        </div>
     </div>
 
+   
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
+
+
+
+
+
+<!-- Scaletta -->
+
+<!-- 
+preparazione variabili note ( lista di oggetti della todo list)
+mostrare in pagina dentro ad una ul tutta la to do list
+-->
