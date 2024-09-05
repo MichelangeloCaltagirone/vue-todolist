@@ -41,6 +41,11 @@ createApp({
             this.todos.push({text: content, done: false}),
             console.log(this.todos[this.todos.length - 1]),
             this.newTodo = ''
+        },
+
+        clearTodo(index){
+            console.log(index),
+            this.todos.splice(index, 1)
         }
     }
 
